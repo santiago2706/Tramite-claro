@@ -1,0 +1,1 @@
+from app.services.health import router as router_health
