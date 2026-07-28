@@ -1,6 +1,9 @@
 import logging 
+from app.core.settings import settings
 
-logging.basic_config(
-    level = logging.INFO,
+logging.basicConfig(
+    level = settings.log_level,
     format = "%(asctime)s | %(levelname)s | %(name)s | %(message)s",
 )
+
+logger = logging.getLogger(settings.app_name)

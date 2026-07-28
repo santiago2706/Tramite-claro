@@ -7,5 +7,5 @@ router = APIRouter()
 @router.get("/health")
 def health_check(
     service: HealthService = Depends(get_health_service)
-): 
-    return health_service.get_status()
+):
+    return service.get_status()

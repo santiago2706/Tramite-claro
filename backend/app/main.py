@@ -1,7 +1,9 @@
 from fastapi import FastAPI
 from app.core.settings import settings
-from app.api.routers.health import router_health
+from app.api.routers.health import router as router_health
+from app.core.logger import logger
 
+logger.info(f"Starting {settings.app_name} API")
 app = FastAPI(
     title=settings.app_name,
     version=settings.app_version
